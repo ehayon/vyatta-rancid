@@ -148,6 +148,7 @@ sub ShowConfiguration {
 	}
 	next if (/^system (shutdown message from|going down )/i);
 	next if (/^\{(master|backup)(:\d+)?\}/);
+	next if (/^Uptime/);
 	$lines++;
 
 	/^database header mismatch: / && return(-1);
